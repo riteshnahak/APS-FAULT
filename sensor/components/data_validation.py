@@ -52,7 +52,6 @@ class DataValidation:
             #return None no columns left
             if len(df.columns)==0:
                 return None
-            logging.info(f"drop completed : {df.shape}")
             return df
         except Exception as e:
             raise SensorException(e, sys)
