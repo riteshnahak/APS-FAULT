@@ -1,0 +1,31 @@
+[ 2023-02-26 15:06:03,511 ] 13 root - INFO - >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> Data Ingestion <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+[ 2023-02-26 15:06:03,511 ] 19 root - INFO - Exporting data into pandas dataframe
+[ 2023-02-26 15:06:03,511 ] 20 root - INFO - Reading data from database  :aps  and collection :sensor
+[ 2023-02-26 15:06:07,041 ] 22 root - INFO - Found columns Index(['_id', 'class', 'aa_000', 'ab_000', 'ac_000', 'ad_000', 'ae_000',
+       'af_000', 'ag_000', 'ag_001',
+       ...
+       'ee_002', 'ee_003', 'ee_004', 'ee_005', 'ee_006', 'ee_007', 'ee_008',
+       'ee_009', 'ef_000', 'eg_000'],
+      dtype='object', length=172)
+[ 2023-02-26 15:06:07,041 ] 24 root - INFO - Dropping column: _id 
+[ 2023-02-26 15:06:07,276 ] 26 root - INFO - Rows and Column in dataframe is (36188, 172)
+[ 2023-02-26 15:06:07,277 ] 23 root - INFO - Replacing NaN values
+[ 2023-02-26 15:06:07,977 ] 30 root - INFO - Saving Dataframe to Feature Store
+[ 2023-02-26 15:06:10,530 ] 35 root - INFO - Splitting the dataset
+[ 2023-02-26 15:06:11,222 ] 38 root - INFO - Create directory if not avaible
+[ 2023-02-26 15:06:11,222 ] 41 root - INFO - Save df to feature store folder
+[ 2023-02-26 15:06:13,533 ] 53 root - INFO - Data ingestion artifact: DataIngestionArtifact(feature_store_file_path='/config/workspace/artifacts/02262023__150603/data ingestion/feature store/sensor.csv', train_file_path='/config/workspace/artifacts/02262023__150603/data ingestion/dataset/train.csv', test_file_path='/config/workspace/artifacts/02262023__150603/data ingestion/dataset/test.csv')
+[ 2023-02-26 15:06:13,976 ] 17 root - INFO - >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> Data Validation <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+[ 2023-02-26 15:06:13,976 ] 105 root - INFO - Reading base dataframe
+[ 2023-02-26 15:06:15,573 ] 107 root - INFO - Replacing na values with NaN
+[ 2023-02-26 15:06:16,921 ] 109 root - INFO - Dropping null values
+[ 2023-02-26 15:06:17,862 ] 38 root - INFO - selcting columns name which contaion null values above threshold 0.7
+[ 2023-02-26 15:06:17,863 ] 40 root - INFO - Dropping columns name : ['ab_000', 'bn_000', 'bo_000', 'bp_000', 'bq_000', 'br_000', 'cr_000']
+[ 2023-02-26 15:06:17,981 ] 112 root - INFO - Reading Train dataframe
+[ 2023-02-26 15:06:18,104 ] 114 root - INFO - Reading Test dataframe
+[ 2023-02-26 15:06:18,223 ] 117 root - INFO - Dropping null values columns from tarin dataframe
+[ 2023-02-26 15:06:18,229 ] 38 root - INFO - selcting columns name which contaion null values above threshold 0.7
+[ 2023-02-26 15:06:18,229 ] 40 root - INFO - Dropping columns name : ['ab_000', 'bn_000', 'bo_000', 'bp_000', 'bq_000', 'br_000', 'cr_000']
+[ 2023-02-26 15:06:18,233 ] 120 root - INFO - Dropping bull values columns from test dataframe
+[ 2023-02-26 15:06:18,239 ] 38 root - INFO - selcting columns name which contaion null values above threshold 0.7
+[ 2023-02-26 15:06:18,239 ] 40 root - INFO - Dropping columns name : ['ab_000', 'bn_000', 'bo_000', 'bp_000', 'bq_000', 'br_000', 'cr_000']
