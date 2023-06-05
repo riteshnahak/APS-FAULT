@@ -17,5 +17,3 @@ python main.py
 ```bash
 This will store our mongo db url,aws_sec_key  etc from .env variabe and will create a mongo client
 ```
-
-## Hello
